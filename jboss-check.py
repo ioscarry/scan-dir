@@ -1,6 +1,6 @@
 #coding:utf-8
 """
-缺点：只能测试200个ip，多了会自己退出。
+shortcoming:only test 200 ips.
 """
 import urllib2
 import threading
@@ -51,8 +51,8 @@ def get_content(url,vuls):
 			print str(e.code)+' HTTPError'
 			continue
 
-		except Exception,e: ###接收超时
-			print e
+		except Exception,e:   ### timeout
+print e
 			continue
 
 		except urllib2.URLError,e:
