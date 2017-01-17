@@ -52,7 +52,7 @@ def get_content(url,vuls):
 			continue
 
 		except Exception,e:   ### timeout
-print e
+			print e
 			continue
 
 		except urllib2.URLError,e:
