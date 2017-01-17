@@ -1,6 +1,6 @@
 #coding:utf-8
 """
-shortcoming:only test 200 ips.
+shortcoming:only test 600 ips.
 """
 import urllib2
 import threading
