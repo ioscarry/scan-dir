@@ -6,7 +6,7 @@ import time
 from sys import argv
 import threadpool
 from random import randint
-
+from os import  path
 
 """
 python jboss-check.py ips.txt 50
@@ -70,17 +70,22 @@ def get_content(host):
             #print e.message
             break
 
-
+pwd=path.dirname(argv[1])
 global counter
 counter=0
 def write(url_succ):
-	with open('success.txt','a') as f:
+	with open(pwd+'/success.txt','a') as f:
 		f.write(url_succ+'\n')
 		global counter
 		counter =counter+1
 		print 'success one - - '+str(counter)
 
-
+def w_401(url_succ):
+    with open(pwd+'/success_401.txt','a') as f:
+		f.write(url_succ+'\n')
+		#global counter
+		#counter =counter+1
+		#print 'success one - - '+str(counter)
 
 if __name__ == '__main__':
     pool = threadpool.ThreadPool(int(argv[2]))
