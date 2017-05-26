@@ -1,7 +1,7 @@
 #coding:utf-8
 #author:IversOn5
 #In order to exploit jboss.
-""" python send_muma.py file.txt 50"""
+""" python send_muma.py file.txt 5 win"""
 
 import  requests
 from random import randint
